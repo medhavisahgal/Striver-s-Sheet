@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+retun
 class Solution
 {
 public:
@@ -17,14 +19,34 @@ public:
         // n=2147483647
         // reason:Time complexity is O(n) which is pretty slow for large values of n.
         // Binary Exponentiation
-        while (p)
+        // while (p)
+        // {
+        //     if (p & 1)
+        //     {
+        //         ans *= x;
+        //     }
+        //     x *= x;
+        //     p >>= 1;
+        // }
+        // if (n < 0)
+        // {
+        //     return 1.0 / ans;
+        // }
+        // return ans;
+        // this is iterative approach
+        if (p == 0)
+            return 1;
+        if (p == 1)
         {
-            if (p & 1)
-            {
-                ans *= x;
-            }
-            x *= x;
-            p >>= 1;
+            if (n < 0)
+                return 1.0 / x;
+            return x;
+        }
+        ans = myPow(x, p >> 1);
+        ans *= ans;
+        if (p & 1)
+        {
+            ans *= x;
         }
         if (n < 0)
         {
