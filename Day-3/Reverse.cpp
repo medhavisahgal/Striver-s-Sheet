@@ -1,6 +1,7 @@
+#include <vector>
 class Solution {
 public:
-    int reversePairs(vector<int>& nums) {
+    int reversePairs(std::vector<int>& nums) {
         //brute force technique
         long long int n=nums.size();
         long long int cnt=0;
@@ -13,5 +14,9 @@ public:
             }
         }
         return cnt;
+        //Time complexity: O(n^2)
+        //Space complexity: O(1)
+        //Optimized approach
+        
     }
 };
