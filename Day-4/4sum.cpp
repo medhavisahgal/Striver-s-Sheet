@@ -24,6 +24,8 @@ public:
         //         }
         //     }
         // }
+        //Time complexity->O(n^4)
+        //Space complexity->O(n)
         // //this approach is not efficient showing TLE
         set<vector<int>>s;
         // for(int i=0;i<n;i++){
@@ -44,6 +46,8 @@ public:
         //         }
         //     }
         // }
+        //Time complexity->O(n^3*logm)where m is the no. of elements in the hashset
+        //Space complexity->O(2 * no. of the quadruplets)+O(N) 
         //this approach is better but not efficient still
         //using two pointer approach
         sort(nums.begin(),nums.end());
@@ -78,6 +82,8 @@ public:
                 }
             }
         }
+        //Time complexity->O(n^3)
+        //Space complexity->O(no. of the quadruplets) ->O(1)
          return ans;
     }
 };
