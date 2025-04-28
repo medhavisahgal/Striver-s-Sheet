@@ -38,6 +38,6 @@ public:
         {
             newnode->next = head2;
         }
-        return newnode->next;
+        return dummy->next;
     }
 };
