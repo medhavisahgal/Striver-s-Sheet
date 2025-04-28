@@ -1,7 +1,7 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-//Definition for singly-linked list.
+// Definition for singly-linked list.
 struct ListNode
 {
     int val;
@@ -14,19 +14,19 @@ struct ListNode
 class Solution
 {
 public:
-    ListNode* reverseList(ListNode* head)
+    ListNode *reverseList(ListNode *head)
     {
-        ListNode *temp=head;
-        ListNode *prev=NULL;
-        ListNode *temp2=NULL;
-        while(temp!=NULL)
+        ListNode *curr = head;
+        ListNode *prev = NULL;
+        ListNode *next = NULL;
+        while (curr)
         {
-            temp2=temp->next;
-            temp->next=prev;
-            prev=temp;
-            temp=temp2;
+            next = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = next;
         }
-        head=prev;
+        head = prev;
         return head;
     }
 };
