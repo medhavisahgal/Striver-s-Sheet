@@ -6,7 +6,8 @@ struct ListNode
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
-
+// skipping the extra nodes that only exist in the longer list — those can't be in the intersection by definition,
+// since the shorter list never had them.If they were part of the intersection, the shorter list would also include them — but it doesn't.
 class Solution
 {
 public:
