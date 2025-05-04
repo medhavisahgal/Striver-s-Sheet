@@ -66,7 +66,7 @@ public:
         // The time complexity will still be O(n) in that case, but the space complexity will be O(1).
         ListNode *dummy = new ListNode(0);
         dummy->next = head;
-        ListNode *prevGroupEnd = dummy;
+        ListNode *before = dummy;
         ListNode *after = head;
         ListNode *curr = nullptr;
         ListNode *prev = nullptr;
@@ -81,7 +81,7 @@ public:
                 groupStart = groupStart->next;
             }
             curr = after;
-            prev = prevGroupEnd;
+            prev = before;
             for (int i = 0; i < k; i++)
             {
                 next = curr->next;
@@ -90,8 +90,8 @@ public:
                 curr = next;
             }
             after->next = curr;
-            prevGroupEnd->next = prev;
-            prevGroupEnd = after;
+            before->next = prev;
+            before = after;
             after = curr;
         }
         return dummy->next;
