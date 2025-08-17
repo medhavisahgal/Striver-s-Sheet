@@ -11,5 +11,9 @@
         "limits": "cpp",
         "semaphore": "cpp",
         "valarray": "cpp"
-    }
+    },
+    "cSpell.words": [
+        "maxl",
+        "maxr"
+    ]
 }
