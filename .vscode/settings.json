@@ -3,6 +3,13 @@
         "vector": "cpp",
         "list": "cpp",
         "string": "cpp",
-        "format": "cpp"
+        "format": "cpp",
+        "barrier": "cpp",
+        "chrono": "cpp",
+        "random": "cpp",
+        "latch": "cpp",
+        "limits": "cpp",
+        "semaphore": "cpp",
+        "valarray": "cpp"
     }
 }
